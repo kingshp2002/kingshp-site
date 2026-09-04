@@ -1,0 +1,72 @@
+{% extends "home/base.html" %}
+{% block contact %}
+
+<section id="contact" class="py-20 bg-black text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+    <div class="flex items-center justify-center gap-6 mb-8">
+    <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center">
+    <i class="ri-kali-linux-fill text-3xl text-red-500"></i>
+    </div>
+    <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center">
+    <i class="ri-terminal-box-fill text-3xl text-green-500"></i>
+    </div>
+    <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center">
+    <span class="font-['Pacifico'] text-2xl text-primary">Shp.shuh</span>
+    </div>
+    <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center">
+    <i class="ri-shield-keyhole-fill text-3xl text-blue-500"></i>
+    </div>
+    <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center">
+    <i class="ri-bug-fill text-3xl text-purple-500"></i>
+    </div>
+    </div>
+    <h2 class="text-3xl lg:text-4xl font-bold mb-4">از همکاری با شما بسیار مسرور خواهیم شد</h2>
+    <p class="text-gray-300 text-lg">رشد جدید را باما استارت بزنید</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+    <div>
+    <h3 class="text-2xl font-bold mb-6">اطلاعات تماس</h3>
+    <div class="space-y-4">
+    <div class="flex items-center gap-4">
+    <div class="w-12 h-12 bg-primary bg-opacity-20 rounded-full flex items-center justify-center">
+    <i class="ri-mail-line text-primary"></i>
+    </div>
+    <div>
+    <div class="font-semibold">ایمیل</div>
+    <div class="text-gray-300">kingshp2002@gmail.com</div>
+    </div>
+    </div>
+    <div class="flex items-center gap-4">
+    <div class="w-12 h-12 bg-primary bg-opacity-20 rounded-full flex items-center justify-center">
+    <i class="ri-phone-line text-primary"></i>
+    </div>
+    <div>
+    <div class="font-semibold">تلفن</div>
+    <div class="text-gray-300">+989902745264</div>
+    </div>
+    </div>
+    <div class="flex items-center gap-4">
+    <div class="w-12 h-12 bg-primary bg-opacity-20 rounded-full flex items-center justify-center">
+    <i class="ri-map-pin-line text-primary"></i>
+    </div>
+    <div>
+    <div class="font-semibold">موقعیت</div>
+    <div class="text-gray-300">ایران، تهران</div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="bg-gray-900 p-8 rounded-2xl">
+    <form method="post" class="space-y-6">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit" class="w-full bg-primary text-black py-3 !rounded-button font-semibold hover:bg-secondary transition-colors duration-300 whitespace-nowrap">
+    ارسال پیام
+    </button>
+    </form>
+    </div>
+    </div>
+    </div>
+    </section>
+    {% endblock contact %}

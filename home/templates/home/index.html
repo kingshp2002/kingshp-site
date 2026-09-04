@@ -1,0 +1,157 @@
+{% extends "home/base.html" %}
+{% load static %}
+{% block index %}
+<section id="home" class="min-h-[70vh] flex items-center relative overflow-hidden">
+<div class="absolute inset-0">
+<div class="absolute inset-0 bg-[url('https://readdy.ai/api/search-image?query=Modern%20minimalist%20workspace%20with%20golden%20accents%2C%20clean%20white%20background%2C%20professional%20developer%20environment%2C%20elegant%20lighting%2C%20subtle%20geometric%20patterns%2C%20contemporary%20design%20elements%2C%20high-tech%20atmosphere&width=1920&height=1080&seq=hero-bg&orientation=landscape')] bg-cover bg-center animate-float opacity-20"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/90"></div>
+</div>
+<div class="absolute inset-0 overflow-hidden">
+<div class="floating-skills">
+<div class="skill-icon python"></div>
+<div class="skill-icon django"></div>
+<div class="skill-icon flask"></div>
+<div class="skill-icon html"></div>
+<div class="skill-icon css"></div>
+<div class="skill-icon js"></div>
+</div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<div class="text-center lg:text-right fade-in">
+<div class="mb-8">
+<img src="https://static.readdy.ai/image/e44129cd293abdcc62ba5655b06633ee/b2fd13e4b239c8746d17073a0828e7e5.webp" alt="شاپور مردانی قراقیه" class="w-32 h-32 rounded-full mx-auto lg:mx-0 lg:mr-auto object-cover border-4 border-primary shadow-lg">
+</div>
+<h1 class="text-4xl lg:text-6xl font-bold mb-4">
+<span >شاپور مردانی قراقیه</span>
+</h1>
+<div class="text-lg text-gray-600 mb-2">متولد ۱۳۸۱ • ایران</div>
+<p class="text-xl lg:text-2xl text-gray-700 mb-8 leading-relaxed">
+توسعه‌دهنده خلاق و متخصص امنیت شبکه<br>
+با اشتیاق برای خلق راه‌حل‌های بزرگ
+</p>
+<div class="flex flex-wrap justify-center lg:justify-start gap-6 mb-8">
+<div class="flex items-center gap-2 bg-primary bg-opacity-10 px-4 py-2 rounded-full">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-lightbulb-line text-primary"></i>
+</div>
+<span class="font-semibold">خلاقیت</span>
+</div>
+<div class="flex items-center gap-2 bg-primary bg-opacity-10 px-4 py-2 rounded-full">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-hammer-line text-primary"></i>
+</div>
+<span class="font-semibold">سخت‌کوشی</span>
+</div>
+<div class="flex items-center gap-2 bg-primary bg-opacity-10 px-4 py-2 rounded-full">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-rocket-line text-primary"></i>
+</div>
+<span class="font-semibold">چشم‌انداز بزرگ</span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+<button class="bg-primary text-black px-8 py-3 !rounded-button font-semibold hover:bg-secondary transition-colors duration-300 whitespace-nowrap">
+مشاهده نمونه کارها
+</button>
+<button class="border-2 border-primary text-primary px-8 py-3 !rounded-button font-semibold hover:bg-primary hover:text-black transition-colors duration-300 whitespace-nowrap">
+<a href="{% static 'docs/kingshp2002.pdf' %}"   target="_blank" class="btn btn-outline-gold px-4">
+    <i class="bi bi-eye"></i> مشاهده رزومه
+</a></button>
+</div>
+</div>
+<div class="hidden lg:block">
+<div class="floating">
+<img src="https://readdy.ai/api/search-image?query=Modern%20web%20development%20illustration%2C%20coding%20workspace%2C%20multiple%20monitors%20displaying%20code%2C%20golden%20accent%20lighting%2C%20clean%20minimalist%20setup%2C%20professional%20developer%20environment%2C%20high-tech%20atmosphere%2C%20elegant%20design&width=600&height=600&seq=hero-illustration&orientation=squarish" alt="توسعه وب" class="w-full h-auto rounded-2xl shadow-2xl object-cover">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- My Story Section -->
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+    <div class="relative">
+    <img src="https://readdy.ai/api/search-image?query=Modern%20workspace%20with%20books%2C%20laptop%2C%20and%20study%20materials%20scattered%20on%20desk%2C%20warm%20lighting%2C%20self-learning%20environment%2C%20creative%20atmosphere%2C%20minimal%20style&width=800&height=600&seq=self-taught&orientation=landscape" alt="مسیر یادگیری" class="rounded-2xl shadow-2xl">
+    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-primary rounded-2xl -rotate-6"></div>
+    <div class="absolute -top-6 -left-6 w-32 h-32 border-4 border-primary rounded-2xl rotate-6"></div>
+    </div>
+    <div class="lg:pr-8">
+    <h2 class="text-3xl lg:text-4xl font-bold mb-6">داستان من: مسیر خودآموزی و اشتیاق</h2>
+    <div class="space-y-6 text-gray-600">
+    <p class="leading-relaxed">
+    من بدون پیشینه دانشگاهی در حوزه کامپیوتر، با اشتیاق فراوان به یادگیری برنامه‌نویسی روی آوردم. این تصمیم نه از روی اجبار، بلکه از عشق به خلق و ساخت دنیای دیجیتال بود.
+    </p>
+    <p class="leading-relaxed">
+    مسیر خودآموزی به من آموخت که محدودیت‌ها تنها در ذهن ما وجود دارند. با پشتکار و اراده قوی، هر روز ساعت‌ها به مطالعه، تمرین و ساخت پروژه‌های شخصی پرداختم.
+    </p>
+    <div class="flex items-center gap-4 text-primary font-semibold">
+    <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center">
+    <i class="ri-book-open-line text-xl"></i>
+    </div>
+    <span>یادگیری مستمر و پایان‌ناپذیر</span>
+    </div>
+    <div class="flex items-center gap-4 text-primary font-semibold">
+    <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center">
+    <i class="ri-focus-2-line text-xl"></i>
+    </div>
+    <span>تمرکز بر حل مسائل واقعی</span>
+    </div>
+    <div class="flex items-center gap-4 text-primary font-semibold">
+    <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center">
+    <i class="ri-heart-line text-xl"></i>
+    </div>
+    <span>عشق به نوآوری و خلاقیت</span>
+    </div>
+    </div>
+    <div class="mt-8">
+    <button class="bg-primary text-black px-8 py-3 !rounded-button font-semibold hover:bg-secondary transition-colors duration-300 whitespace-nowrap">
+    مشاهده مسیر پیشرفت
+    </button>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+
+<!-- Personal Features Section -->
+<section id="about" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+    <h2 class="text-3xl lg:text-4xl font-bold mb-4">ویژگی‌های شخصیتی</h2>
+    <p class="text-gray-600 text-lg">آنچه که مرا متمایز می‌کند</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center skill-card">
+    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+    <i class="ri-palette-line text-2xl text-primary"></i>
+    </div>
+    <h3 class="text-xl font-bold mb-4">خلاقیت و نوآوری</h3>
+    <p class="text-gray-600 leading-relaxed">
+    همیشه به دنبال راه‌حل‌های خلاقانه و نوآورانه هستم. هر پروژه را فرصتی برای ابداع چیزی منحصر به فرد می‌دانم.
+    </p>
+    </div>
+    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center skill-card">
+    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+    <i class="ri-trophy-line text-2xl text-primary"></i>
+    </div>
+    <h3 class="text-xl font-bold mb-4">سخت‌کوشی</h3>
+    <p class="text-gray-600 leading-relaxed">
+    اعتقاد راسخ به اینکه موفقیت حاصل تلاش مداوم و پشتکار است. هیچ چالشی بزرگ‌تر از عزم من نیست.
+    </p>
+    </div>
+    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center skill-card">
+    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+    <i class="ri-telescope-line text-2xl text-primary"></i>
+    </div>
+    <h3 class="text-xl font-bold mb-4">چشم‌انداز بزرگ</h3>
+    <p class="text-gray-600 leading-relaxed">
+    هدف من ساخت پروژه‌هایی است که تأثیر واقعی بر زندگی مردم داشته باشند و آینده را شکل دهند.
+    </p>
+    </div>
+    </div>
+    </div>
+    </section>
+
+{% endblock index %}
