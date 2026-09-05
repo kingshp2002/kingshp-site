@@ -51,13 +51,32 @@
 </div>
 </div>
 <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-<button class="bg-primary text-black px-8 py-3 !rounded-button font-semibold hover:bg-secondary transition-colors duration-300 whitespace-nowrap">
+{% comment %} <button class="bg-primary text-black px-8 py-3 !rounded-button font-semibold hover:bg-secondary transition-colors duration-300 whitespace-nowrap">
 مشاهده نمونه کارها
-</button>
-<button class="border-2 border-primary text-primary px-8 py-3 !rounded-button font-semibold hover:bg-primary hover:text-black transition-colors duration-300 whitespace-nowrap">
+</button> {% endcomment %}
+<button class="btn btn-primary ">
+<a href="{% url 'home:portfolio' %}"   target="_blank" >
+    <i class="bi bi-eye"></i> مشاهده نمونه کارها
+</a></button> 
+<button class="btn btn-dark ">
+<a href="{% static 'docs/kingshp2002.pdf' %}"   target="_blank" >
+    <i class="bi bi-eye"></i> مشاهده رزومه
+</a></button> 
+{% comment %} <button class="border-2 border-primary text-primary px-8 py-3 !rounded-button font-semibold hover:bg-primary hover:text-black transition-colors duration-300 whitespace-nowrap">
 <a href="{% static 'docs/kingshp2002.pdf' %}"   target="_blank" class="btn btn-outline-gold px-4">
     <i class="bi bi-eye"></i> مشاهده رزومه
-</a></button>
+</a></button> {% endcomment %}
+<div class="flex gap-4">
+{% comment %} <a href="#" class="w-10 h-10 bg-primary bg-opacity-20 rounded-full flex items-center justify-center hover:bg-primary hover:text-black transition-colors">
+<i class="ri-linkedin-line"></i>
+</a> {% endcomment %}
+<a href="https://github.com/kingshp2002/" target="_blank"  class="w-10 h-10 bg-primary bg-opacity-20 rounded-full flex items-center justify-center hover:bg-primary hover:text-black transition-colors">
+<i class="ri-github-line"></i>
+</a>
+<a href="https://t.me/Shapoor2002" target="_blank"  class="w-10 h-10 bg-primary bg-opacity-20 rounded-full flex items-center justify-center hover:bg-primary hover:text-black transition-colors">
+<i class="ri-telegram-line"></i>
+</a>
+</div>
 </div>
 </div>
 <div class="hidden lg:block">

@@ -29,3 +29,6 @@ def contact(request):
 def experience(request):
     context = {}
     return render(request,'home/experience.html',context)
+def portfolio(request):
+    context = {}
+    return render(request,'home/portfolio.html',context)
