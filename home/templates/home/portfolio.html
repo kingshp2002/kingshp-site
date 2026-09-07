@@ -1,61 +1,41 @@
 {% extends "home/base.html" %}
+{% load static %}
 {% block portfolio %}
 <main>
   <div class="album py-5 bg-light">
+    <div class="text-center mb-16">
+    <h2 class="text-3xl lg:text-4xl font-bold mb-4">نمونه کار ها</h2>
+    <p class="text-gray-600 text-lg">حوزه‌های تخصصی من</p>
+    </div>
     <div class="container">
 
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        {% for portfolio in portfolios %}
         <div class="col">
           <div class="card shadow-sm">
-            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="https://platco.ir/wp-content/uploads/2023/07/%D8%A7%D8%AD%D8%B1%D8%A7%D8%B2-%D9%87%D9%88%DB%8C%D8%AA-%DA%86%DB%8C%D8%B3%D8%AA.jpg01.jpg" role="img" aria-label="Placeholder:portfolio" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">portfolio</text></svg>
+          
+            <img class="card-img-top" src="{{ portfolio.image.url }}">
 
             <div class="card-body">
-              <p class="card-text">namone aval</p>
+              <p class="card-text">{{ portfolio.title }}</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">didan</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">didan</button>
+                  <a class="btn btn-dark text-white btn-sm btn-outline-secondary">توضیحات</a>
+                  <a href="{{ portfolio.github_link }}" target="_blank"  class="w-10 h-10 bg-primary bg-opacity-20 flex items-center justify-center hover:bg-primary hover:text-black transition-colors">
+                    <i class="ri-github-line"></i>
+                  </a>
+                  
                 </div>
-                <small class="text-muted">9</small>
+                <small class="text-dark">{{ portfolio.created_at }}</small>
               </div>
+              
             </div>
           </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder:portfolio" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">portfolio</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">namone dovom</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">didan</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">didan</button>
-                </div>
-                <small class="text-muted">9</small>
-              </div>
-            </div>
           </div>
-
-      </div>
-      <div class="col">
-        <div class="card shadow-sm">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder:portfolio" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">portfolio</text></svg>
-
-          <div class="card-body">
-            <p class="card-text">namone sevom</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">didan</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">didan</button>
-              </div>
-              <small class="text-muted">9</small>
-            </div>
+          
+          
+            {% endfor %}
           </div>
-        </div>
-
-      
     </div>
   </div>  
 </main>

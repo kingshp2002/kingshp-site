@@ -1,7 +1,7 @@
 from django.shortcuts import redirect, render
 from django.contrib import messages
 from .forms import ContactForm
-from .models import Contact
+from .models import Contact , Portfolio
 
 # Create your views here.
 def index(request):
@@ -30,5 +30,5 @@ def experience(request):
     context = {}
     return render(request,'home/experience.html',context)
 def portfolio(request):
-    context = {}
+    context = {'portfolios': Portfolio.objects.all()}
     return render(request,'home/portfolio.html',context)
