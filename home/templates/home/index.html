@@ -100,11 +100,14 @@
     <h2 class="text-3xl lg:text-4xl font-bold mb-6">داستان من: مسیر خودآموزی و اشتیاق</h2>
     <div class="space-y-6 text-gray-600">
     <p class="leading-relaxed">
-    من بدون پیشینه دانشگاهی در حوزه کامپیوتر، با اشتیاق فراوان به یادگیری برنامه‌نویسی روی آوردم. این تصمیم نه از روی اجبار، بلکه از عشق به خلق و ساخت دنیای دیجیتال بود.
-    </p>
+من یک برنامه‌نویس پایتون هستم که مسیر یادگیری خود را به صورت خودآموز و با تمرکز بر پروژه‌های عملی طی کرده‌ام. تمرکز اصلی من بر توسعه نرم‌افزار با استفاده از اکوسیستم پایتون و فریم‌ورک Django است.
+
+</p>
+<p class="leading-relaxed">
+برخلاف مسیرهای سنتی، من یادگیری خود را بر پایه حل چالش‌های واقعی و درک عمیق الگوریتم‌ها و ساختارهای داده بنا کرده‌ام. تجربه من در کار با پایگاه داده‌ها، پیاده‌سازی Logicهای پیچیده در Django و ساخت اپلیکیشن‌های کاربردی، نشان‌دهنده قدرت انضباط شخصی و توانایی من در یادگیری سریع تکنولوژی‌های جدید است.    
+</p>
     <p class="leading-relaxed">
-    مسیر خودآموزی به من آموخت که محدودیت‌ها تنها در ذهن ما وجود دارند. با پشتکار و اراده قوی، هر روز ساعت‌ها به مطالعه، تمرین و ساخت پروژه‌های شخصی پرداختم.
-    </p>
+من معتقدم برنامه‌نویسی فراتر از نوشتن کد، هنر حل مسئله با رویکردی بهینه و ساختاریافته است.    </p>
     <div class="flex items-center gap-4 text-primary font-semibold">
     <div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center">
     <i class="ri-book-open-line text-xl"></i>
@@ -124,10 +127,10 @@
     <span>عشق به نوآوری و خلاقیت</span>
     </div>
     </div>
-    <div class="mt-8">
-    <button class="bg-primary text-black px-8 py-3 !rounded-button font-semibold hover:bg-secondary transition-colors duration-300 whitespace-nowrap">
-    مشاهده مسیر پیشرفت
-    </button>
+    {% comment %} <div class="mt-8">
+    <a href="{% url 'home:index' %}" class="btn btn-primary">
+    <i class="bi bi-eye"></i> درباره من بیشتر بدانید
+    </a> {% endcomment %}
     </div>
     </div>
     </div>
@@ -157,7 +160,7 @@
     </div>
     <h3 class="text-xl font-bold mb-4">سخت‌کوشی</h3>
     <p class="text-gray-600 leading-relaxed">
-    اعتقاد راسخ به اینکه موفقیت حاصل تلاش مداوم و پشتکار است. هیچ چالشی بزرگ‌تر از عزم من نیست.
+    اعتقاد راسخ به اینکه موفقیت حاصل تلاش مداوم و پشتکار است. هیچ چالشی بزرگ‌تر از اراده من نیست.
     </p>
     </div>
     <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center skill-card">
@@ -166,7 +169,7 @@
     </div>
     <h3 class="text-xl font-bold mb-4">چشم‌انداز بزرگ</h3>
     <p class="text-gray-600 leading-relaxed">
-    هدف من ساخت پروژه‌هایی است که تأثیر واقعی بر زندگی مردم داشته باشند و آینده را شکل دهند.
+    هدف من ساخت پروژه‌هایی است که تأثیر واقعی بر زندگی مردم داشته باشند و آینده را خلق کنم.
     </p>
     </div>
     </div>
