@@ -3,7 +3,7 @@
 {% block index %}
 <section id="home" class="min-h-[70vh] flex items-center relative overflow-hidden">
 <div class="absolute inset-0">
-<div class="absolute inset-0 bg-[url('https://readdy.ai/api/search-image?query=Modern%20minimalist%20workspace%20with%20golden%20accents%2C%20clean%20white%20background%2C%20professional%20developer%20environment%2C%20elegant%20lighting%2C%20subtle%20geometric%20patterns%2C%20contemporary%20design%20elements%2C%20high-tech%20atmosphere&width=1920&height=1080&seq=hero-bg&orientation=landscape')] bg-cover bg-center animate-float opacity-20"></div>
+<div class="absolute inset-0 bg-[url('{% static "images/hero-bg.jpg" %}')] bg-cover bg-center animate-float opacity-20"></div>
 <div class="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/90"></div>
 </div>
 <div class="absolute inset-0 overflow-hidden">
@@ -20,7 +20,7 @@
 <div class="grid lg:grid-cols-2 gap-12 items-center">
 <div class="text-center lg:text-right fade-in">
 <div class="mb-8">
-<img src="https://static.readdy.ai/image/e44129cd293abdcc62ba5655b06633ee/b2fd13e4b239c8746d17073a0828e7e5.webp" alt="شاپور مردانی قراقیه" class="w-32 h-32 rounded-full mx-auto lg:mx-0 lg:mr-auto object-cover border-4 border-primary shadow-lg">
+<img src="{% static 'images/king.jpg' %}" alt="شاپور مردانی قراقیه" class="w-32 h-32 rounded-full mx-auto lg:mx-0 lg:mr-auto object-cover border-4 border-primary shadow-lg">
 </div>
 <h1 class="text-4xl lg:text-6xl font-bold mb-4">
 <span >شاپور مردانی قراقیه</span>
@@ -81,7 +81,7 @@
 </div>
 <div class="hidden lg:block">
 <div class="floating">
-<img src="https://readdy.ai/api/search-image?query=Modern%20web%20development%20illustration%2C%20coding%20workspace%2C%20multiple%20monitors%20displaying%20code%2C%20golden%20accent%20lighting%2C%20clean%20minimalist%20setup%2C%20professional%20developer%20environment%2C%20high-tech%20atmosphere%2C%20elegant%20design&width=600&height=600&seq=hero-illustration&orientation=squarish" alt="توسعه وب" class="w-full h-auto rounded-2xl shadow-2xl object-cover">
+<img src="{% static 'images/web-development.jpg' %}" alt="توسعه وب" class="w-full h-auto rounded-2xl shadow-2xl object-cover">
 </div>
 </div>
 </div>
@@ -92,7 +92,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid lg:grid-cols-2 gap-12 items-center">
     <div class="relative">
-    <img src="https://readdy.ai/api/search-image?query=Modern%20workspace%20with%20books%2C%20laptop%2C%20and%20study%20materials%20scattered%20on%20desk%2C%20warm%20lighting%2C%20self-learning%20environment%2C%20creative%20atmosphere%2C%20minimal%20style&width=800&height=600&seq=self-taught&orientation=landscape" alt="مسیر یادگیری" class="rounded-2xl shadow-2xl">
+    <img src="{% static 'images/learning-journey.jpg' %}" alt="مسیر یادگیری" class="rounded-2xl shadow-2xl">
     <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-primary rounded-2xl -rotate-6"></div>
     <div class="absolute -top-6 -left-6 w-32 h-32 border-4 border-primary rounded-2xl rotate-6"></div>
     </div>
