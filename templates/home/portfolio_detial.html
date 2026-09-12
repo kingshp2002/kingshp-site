@@ -1,0 +1,23 @@
+{% extends "home/base.html" %}
+{% block portfolio_detail %}
+
+<div class="container" style="margin-top: 10px; margin-bottom: 100px;">
+    <div class="row">
+        <h1 class="display-2 m-5"  >{{portfolio.title}}</h1>
+        <img src="{{portfolio.image.url}}" alt="{{portfolio.image.name}}" class="image-defualt m-4 border border-2" />
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-auto">
+                    <h4 class="m-5 ">{{portfolio.description}}</h4>
+                </div>
+                <div class="col">
+                    
+                </div>
+                <div class="col col-lg-2">
+                    <p><b>تاریخ:</b> {{portfolio.created_at.date}}</p>   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock portfolio_detail %}

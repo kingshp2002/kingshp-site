@@ -9,4 +9,5 @@ urlpatterns = [
     path('contact/',contact,name="contact"),
     path('experience/',experience,name="experience"),
     path('portfolio/',portfolio,name="portfolio"),
+    path('portfolio/<int:id>',portfolio_detial,name="portfolio"),
 ]

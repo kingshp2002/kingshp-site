@@ -32,3 +32,6 @@ def experience(request):
 def portfolio(request):
     context = {'portfolios': Portfolio.objects.all()}
     return render(request,'home/portfolio.html',context)
+def portfolio_detial(request,id):
+    context = {'portfolio': Portfolio.objects.get(pk=id)}
+    return render(request,'home/portfolio_detial.html',context)
