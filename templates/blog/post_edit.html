@@ -1,0 +1,23 @@
+{% extends "home/base.html" %}
+
+{% block index %}
+<main class="bg-zinc-50 py-16 md:py-24">
+  <section class="max-w-3xl mx-auto px-6">
+    <a href="{% url 'blog:blog' %}" class="inline-flex items-center gap-2 text-sm text-zinc-500 hover:text-amber-600 transition-colors mb-8">
+      <i class="ri-arrow-right-line" aria-hidden="true"></i> بازگشت به وبلاگ
+    </a>
+    <div class="bg-white rounded-2xl border border-zinc-100 p-6 md:p-10 shadow-sm">
+      <p class="text-xs font-medium text-amber-600 tracking-widest uppercase mb-3">داشبورد نویسنده</p>
+      <h1 class="text-3xl font-bold text-zinc-900 mb-2">ویرایش مقاله</h1>
+      <p class="text-sm text-zinc-500 mb-8">محتوای مقاله را به‌روزرسانی کن.</p>
+      <form method="post" class="space-y-5 [&_p]:space-y-2 [&_label]:block [&_label]:text-sm [&_label]:font-medium [&_label]:text-zinc-700 [&_input]:w-full [&_input]:rounded-lg [&_input]:border [&_input]:border-zinc-200 [&_input]:px-4 [&_input]:py-3 [&_input]:outline-none [&_input]:focus:border-amber-400 [&_textarea]:w-full [&_textarea]:rounded-lg [&_textarea]:border [&_textarea]:border-zinc-200 [&_textarea]:px-4 [&_textarea]:py-3 [&_textarea]:outline-none [&_textarea]:focus:border-amber-400 [&_select]:w-full [&_select]:rounded-lg [&_select]:border [&_select]:border-zinc-200 [&_select]:px-4 [&_select]:py-3">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="inline-flex items-center gap-2 rounded-lg bg-zinc-900 text-white px-5 py-3 text-sm font-medium hover:bg-amber-500 hover:text-zinc-900 transition-colors">
+          <i class="ri-save-line" aria-hidden="true"></i> ذخیره تغییرات
+        </button>
+      </form>
+    </div>
+  </section>
+</main>
+{% endblock index %}

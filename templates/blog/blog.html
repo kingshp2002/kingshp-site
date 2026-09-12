@@ -1,0 +1,61 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block index %}
+<section id="blog" class="blog-showcase py-24 bg-zinc-50">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-14">
+      <div>
+        <p class="text-xs font-medium text-amber-600 tracking-widest uppercase mb-3">یادداشت‌ها</p>
+        <h1 class="font-bold text-4xl md:text-5xl text-zinc-900">از وبلاگ</h1>
+        <p class="mt-4 max-w-xl text-sm leading-8 text-zinc-500">تجربه‌ها، آموخته‌ها و نگاه من به توسعه وب، پایتون و امنیت.</p>
+      </div>
+      {% if user.is_authenticated %}
+      <a href="{% url 'blog:post_create' %}" class="text-sm font-medium text-zinc-500 hover:text-amber-600 transition-colors self-start sm:self-auto">
+        <i class="ri-add-line" aria-hidden="true"></i> مقاله جدید
+      </a>
+      {% endif %}
+    </div>
+
+    {% if posts %}
+    <div class="grid md:grid-cols-3 gap-6">
+      {% for post in posts %}
+      <article class="group bg-white rounded-2xl overflow-hidden border border-zinc-100 hover:border-amber-400 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+        <div class="w-full h-44 overflow-hidden bg-zinc-900">
+          {% if forloop.counter|divisibleby:3 %}
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=700&q=80" alt="{{ post.title }}" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          {% elif forloop.counter|divisibleby:2 %}
+          <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=700&q=80" alt="{{ post.title }}" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          {% else %}
+          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=700&q=80" alt="{{ post.title }}" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          {% endif %}
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-xs bg-amber-50 text-amber-700 border border-amber-200 px-2.5 py-1 rounded-full">{{ post.category|default:'توسعه وب' }}</span>
+            <span class="text-xs text-zinc-400">{{ post.created_at|date:"Y/m/d" }}</span>
+          </div>
+          <a href="{% url 'blog:post_detail' post.slug %}">
+            <h2 class="font-bold text-lg text-zinc-900 mb-2 group-hover:text-amber-600 transition-colors leading-8">{{ post.title }}</h2>
+          </a>
+          <p class="text-sm text-zinc-500 leading-relaxed mb-4">{{ post.content|truncatewords:24 }}</p>
+          <div class="flex items-center justify-between gap-3">
+            <a href="{% url 'blog:post_detail' post.slug %}" class="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-900 hover:text-amber-600 transition-colors">
+              ادامه مطلب <i class="ri-arrow-left-line" aria-hidden="true"></i>
+            </a>
+            <span class="text-xs text-zinc-400"><i class="ri-eye-line" aria-hidden="true"></i> {{ post.views }}</span>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="rounded-2xl border border-dashed border-zinc-300 bg-white py-20 text-center">
+      <i class="ri-draft-line text-4xl text-amber-500" aria-hidden="true"></i>
+      <h2 class="mt-4 text-xl font-bold text-zinc-900">هنوز مقاله‌ای منتشر نشده است</h2>
+      <p class="mt-2 text-sm text-zinc-500">به‌زودی اولین یادداشت اینجا منتشر می‌شود.</p>
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endblock index %}

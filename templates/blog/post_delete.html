@@ -1,0 +1,20 @@
+{% extends "home/base.html" %}
+
+{% block index %}
+<main class="bg-zinc-50 py-16 md:py-24">
+  <section class="max-w-lg mx-auto px-6">
+    <div class="bg-white rounded-2xl border border-red-100 p-6 md:p-8 shadow-sm text-center">
+      <div class="w-14 h-14 mx-auto rounded-full bg-red-50 text-red-500 flex items-center justify-center"><i class="ri-delete-bin-line text-2xl" aria-hidden="true"></i></div>
+      <h1 class="text-2xl font-bold text-zinc-900 mt-5">حذف مقاله</h1>
+      <p class="text-zinc-600 leading-8 mt-3">آیا مطمئنی می‌خواهی مقاله‌ی «{{ post.title }}» را حذف کنی؟ این عملیات قابل بازگشت نیست.</p>
+      <form method="post" class="flex flex-col sm:flex-row justify-center gap-3 mt-8">
+        {% csrf_token %}
+        <button type="submit" class="inline-flex items-center justify-center gap-2 rounded-lg bg-red-600 text-white px-5 py-3 text-sm font-medium hover:bg-red-700 transition-colors">
+          <i class="ri-delete-bin-line" aria-hidden="true"></i> بله، حذف کن
+        </button>
+        <a href="{% url 'blog:post_detail' post.slug %}" class="inline-flex items-center justify-center rounded-lg border border-zinc-200 text-zinc-700 px-5 py-3 text-sm hover:bg-zinc-50 transition-colors">انصراف</a>
+      </form>
+    </div>
+  </section>
+</main>
+{% endblock index %}
