@@ -35,7 +35,7 @@ def post_edit(request, slug):
             form.save()
 
             return redirect(
-                'post_detail',
+                'blog:post_detail',
                 slug=post.slug
             )
 
@@ -66,7 +66,7 @@ def post_delete(request, slug):
     if request.method == 'POST':
         post.delete()
 
-        return redirect('/admin/')
+        return redirect('blog:blog')
 
     return render(
         request,
@@ -92,7 +92,7 @@ def post_create(request):
             post.save()
 
             return redirect(
-                'post_detail',
+                'blog:post_detail',
                 slug=post.slug
             )
 
@@ -134,7 +134,7 @@ def register(request):
             user.groups.add(readers_group)
             login(request, user)
 
-            return redirect('home:index')
+            return redirect('blog:blog')
 
     else:
         form = RegisterForm()
@@ -157,7 +157,7 @@ def login_view(request):
 
         if user is not None:
             login(request, user)
-            return redirect('/blog/')
+            return redirect('blog:blog')
 
     return render(request, 'blog/login.html')
 def blog(request):
@@ -165,6 +165,6 @@ def blog(request):
     return render(request, 'blog/blog.html', {'posts': posts})
 def logout_view(request):
     logout(request)
-    return redirect('/blog/login/')
+    return redirect('blog:login')
 def is_author(user):
     return user.groups.filter(name='Authors').exists()
