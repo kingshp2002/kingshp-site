@@ -1,0 +1,93 @@
+{% extends "home/base.html" %}
+{% load static %}
+{% block title %}Shapoor Mardani | Python & Django Backend Developer{% endblock %}
+{% block index %}
+<section id="home" class="hero-section">
+    <div class="container py-5">
+        <div class="row align-items-center g-5 min-vh-75">
+            <div class="col-lg-7">
+                <span class="eyebrow"><i class="ri-code-s-slash-line"></i> Python • Django • Backend</span>
+                <h1 class="display-3 fw-bold mt-4 mb-3">Shapoor Mardani</h1>
+                <h2 class="hero-title mb-4">Python & Django Backend Developer</h2>
+                <p class="hero-text mb-4">وب‌اپلیکیشن، REST API و سیستم‌های بک‌اند را با Python و Django می‌سازم؛ با تمرکز روی کدنویسی تمیز، دیتابیس و توسعه قابل نگهداری.</p>
+                <div class="d-flex flex-wrap gap-3 mb-4">
+                    <a href="{% url 'home:portfolio' %}" class="btn btn-gold btn-lg"><i class="ri-folder-open-line"></i> مشاهده پروژه‌ها</a>
+                    <a href="{% static 'docs/kingshp2002.pdf' %}" target="_blank" rel="noopener" class="btn btn-outline-light btn-lg"><i class="ri-file-text-line"></i> مشاهده رزومه</a>
+                </div>
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="tech-badge">Python</span><span class="tech-badge">Django</span><span class="tech-badge">DRF</span>
+                    <span class="tech-badge">PostgreSQL</span><span class="tech-badge">Docker</span><span class="tech-badge">Git</span>
+                </div>
+            </div>
+            <div class="col-lg-5 text-center">
+                <div class="hero-visual">
+                    <img src="{% static 'images/web-development.jpg' %}" alt="توسعه وب با Django" class="img-fluid rounded-4 shadow-lg">
+                    <div class="code-card text-start">
+                        <span>backend.py</span>
+                        <code>class Developer:<br>&nbsp;&nbsp;stack = ["Python", "Django", "DRF"]</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="section-light py-5">
+    <div class="container py-lg-5">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-5">
+                <img src="{% static 'images/learning-journey.jpg' %}" alt="مسیر یادگیری شاپور مردانی" class="img-fluid rounded-4 shadow">
+            </div>
+            <div class="col-lg-7 text-dark">
+                <span class="section-label">ABOUT ME</span>
+                <h2 class="section-title mt-2">درباره من</h2>
+                <p class="lead text-secondary">من یک توسعه‌دهنده Python و Django هستم و مسیر یادگیری خودم را پروژه‌محور دنبال کرده‌ام.</p>
+                <p class="text-secondary lh-lg">تمرکز اصلی من روی Backend، Django، Django REST Framework، PostgreSQL و ابزارهای توسعه نرم‌افزار است. در کنار بک‌اند، HTML، CSS و Bootstrap را برای ساخت رابط‌های کاربردی و واکنش‌گرا به کار می‌برم.</p>
+                <div class="row g-3 mt-3">
+                    <div class="col-sm-4"><div class="mini-card"><i class="ri-book-open-line"></i><strong>یادگیری مستمر</strong><small>همیشه در حال رشد</small></div></div>
+                    <div class="col-sm-4"><div class="mini-card"><i class="ri-tools-line"></i><strong>پروژه‌محور</strong><small>یادگیری با ساختن</small></div></div>
+                    <div class="col-sm-4"><div class="mini-card"><i class="ri-focus-3-line"></i><strong>حل مسئله</strong><small>تمرکز روی راه‌حل</small></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-dark py-5">
+    <div class="container py-lg-5">
+        <div class="text-center mb-5">
+            <span class="section-label">WHAT I BUILD</span>
+            <h2 class="section-title text-white mt-2">چه چیزهایی می‌سازم؟</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3"><div class="service-card"><i class="ri-server-line"></i><h3>Backend</h3><p>سیستم‌های بک‌اند با Python و Django.</p></div></div>
+            <div class="col-md-6 col-lg-3"><div class="service-card"><i class="ri-braces-line"></i><h3>REST API</h3><p>API با Django REST Framework و ساختار قابل توسعه.</p></div></div>
+            <div class="col-md-6 col-lg-3"><div class="service-card"><i class="ri-window-line"></i><h3>Web Apps</h3><p>وب‌اپلیکیشن‌های کاربردی با Django و Bootstrap.</p></div></div>
+            <div class="col-md-6 col-lg-3"><div class="service-card"><i class="ri-database-2-line"></i><h3>Database</h3><p>کار با SQL و PostgreSQL و طراحی داده.</p></div></div>
+        </div>
+    </div>
+</section>
+
+<section class="section-light py-5">
+    <div class="container py-lg-5 text-dark">
+        <div class="d-flex justify-content-between align-items-end mb-4">
+            <div><span class="section-label">TECH STACK</span><h2 class="section-title mt-2">ابزارها و فناوری‌ها</h2></div>
+            <a href="{% url 'home:skills' %}" class="text-decoration-none text-dark fw-bold">همه مهارت‌ها ←</a>
+        </div>
+        <div class="tech-grid">
+            <span>Python</span><span>Django</span><span>Django REST Framework</span><span>PostgreSQL</span>
+            <span>SQLite</span><span>Git / GitHub</span><span>Linux / Ubuntu</span><span>Docker</span>
+            <span>Swagger / OpenAPI</span><span>HTML5</span><span>CSS3</span><span>Bootstrap</span>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section py-5">
+    <div class="container text-center py-4">
+        <span class="section-label">LET'S WORK TOGETHER</span>
+        <h2 class="text-white fw-bold mt-2">یک پروژه در ذهن دارید؟</h2>
+        <p class="text-white-50 mb-4">اگر برای توسعه Backend، وب‌اپلیکیشن یا API به کمک نیاز دارید، خوشحال می‌شوم درباره پروژه صحبت کنیم.</p>
+        <a href="{% url 'home:contact' %}" class="btn btn-gold btn-lg">تماس با من <i class="ri-arrow-left-line"></i></a>
+    </div>
+</section>
+{% endblock index %}

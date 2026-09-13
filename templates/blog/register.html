@@ -1,0 +1,17 @@
+{% extends "home/base.html" %}
+{% block title %}ثبت‌نام | Shapoor Mardani{% endblock %}
+{% block index %}
+<section class="page-header"><div class="container py-5"><span class="section-label">REGISTER</span><h1 class="display-5 fw-bold text-white mt-2">ساخت حساب</h1><p class="text-white-50 mb-0">به جمع نویسندگان و خوانندگان وبلاگ بپیوند.</p></div></section>
+<section class="section-light py-5"><div class="container py-lg-5">
+<div class="row justify-content-center"><div class="col-lg-5 col-md-7">
+<div class="contact-form   text-white bg-dark">
+<form method="post">
+{% csrf_token %}
+{{ form.as_p }}
+<button type="submit" class="btn btn-gold w-100 mt-2">ثبت‌نام <i class="ri-arrow-left-line"></i></button>
+</form>
+<p class="text-secondary small mt-4 mb-0 text-center">قبلاً ثبت‌نام کرده‌ای؟ <a href="{% url 'blog:login' %}" class="fw-bold text-decoration-none">وارد شو</a></p>
+</div>
+</div></div>
+</div></section>
+{% endblock index %}

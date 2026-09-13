@@ -1,0 +1,12 @@
+{% extends "home/base.html" %}
+{% block title %}{{ portfolio.title }} | Shapoor Mardani{% endblock %}
+{% block portfolio_detail %}
+<section class="section-light py-5"><div class="container py-lg-4">
+<a href="{% url 'home:portfolio' %}" class="back-link"><i class="ri-arrow-right-line"></i> بازگشت به پروژه‌ها</a>
+<div class="project-detail mt-4 text-dark">
+{% if portfolio.image %}<img src="{{ portfolio.image.url }}" alt="{{ portfolio.title }}" class="img-fluid rounded-4 mb-4">{% endif %}
+<div class="d-flex flex-wrap justify-content-between gap-3 align-items-start"><div><span class="section-label">PROJECT</span><h1 class="display-5 fw-bold mt-2">{{ portfolio.title }}</h1></div><span class="text-secondary">{{ portfolio.created_at|date:"Y/m/d" }}</span></div>
+<hr><div class="project-description text-dark lh-lg">{{ portfolio.description|linebreaks }}</div>
+{% if portfolio.github_link %}<a href="{{ portfolio.github_link }}" target="_blank" rel="noopener" class="btn btn-warning"><i class="ri-github-line"></i> مشاهده کد در GitHub</a>{% endif %}
+</div></div></section>
+{% endblock portfolio_detail %}

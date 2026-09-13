@@ -1,0 +1,26 @@
+{% extends "home/base.html" %}
+{% block title %}پروژه‌ها | Shapoor Mardani{% endblock %}
+{% block portfolio %}
+<section class="page-header"><div class="container py-5"><span class="section-label">PORTFOLIO</span><h1 class="display-5 fw-bold text-white mt-2">پروژه‌های من</h1><p class="text-white-50 mb-0">نمونه‌هایی از پروژه‌ها و تجربه‌های عملی من.</p></div></section>
+<section class="section-light py-5"><div class="container py-lg-5">
+<div class="row g-4">
+{% for portfolio in portfolios %}
+<div class="col-md-6 col-lg-4">
+<article class="project-card ">
+{% if portfolio.image %}<img src="{{ portfolio.image.url }}" alt="{{ portfolio.title }}" loading="lazy">{% endif %}
+<div class="p-4 d-flex flex-column h-100">
+<h2 class="h4 fw-bold">{{ portfolio.title }}</h2>
+<p class="text-secondary flex-grow-1">{{ portfolio.description|truncatewords:28 }}</p>
+<div class="d-flex justify-content-between align-items-center gap-2 mt-3">
+<a class="btn btn-outline-warning btn-sm" href="{% url 'home:portfolio_detail' portfolio.id %}">مشاهده پروژه</a>
+{% if portfolio.github_link %}<a class="btn btn-outline-info btn-sm" href="{{ portfolio.github_link }}" target="_blank" rel="noopener"><i class="ri-github-line"></i> GitHub</a>{% endif %}
+</div>
+</div>
+</article>
+</div>
+{% empty %}
+<div class="col-12"><div class="empty-state"><i class="ri-folder-open-line"></i><h2>هنوز پروژه‌ای ثبت نشده است</h2><p>پروژه‌های جدید به‌زودی اینجا نمایش داده می‌شوند.</p></div></div>
+{% endfor %}
+</div>
+</div></section>
+{% endblock portfolio %}

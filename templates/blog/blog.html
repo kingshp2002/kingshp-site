@@ -1,0 +1,16 @@
+{% extends "home/base.html" %}
+{% block title %}بلاگ | Shapoor Mardani{% endblock %}
+{% block index %}
+<section class="page-header"><div class="container py-5"><span class="section-label">BLOG</span><h1 class="display-5 fw-bold text-white mt-2">یادداشت‌های فنی</h1><p class="text-white-50 mb-0">تجربه‌ها و آموخته‌هایم درباره Python، Django، Backend و توسعه وب.</p></div></section>
+<section class="section-light py-5"><div class="container py-lg-5">
+{% if user.is_authenticated %}<div class="text-end mb-4"><a href="{% url 'blog:post_create' %}" class="btn btn-gold"><i class="ri-add-line"></i> مقاله جدید</a></div>{% endif %}
+<div class="row g-4">{% for post in posts %}
+<div class="col-md-6 col-lg-4"><article class="blog-card p-4">
+<div class="d-flex justify-content-between mb-3"><span class="badge text-bg-warning">{{ post.category|default:"توسعه وب" }}</span><small class="text-secondary">{{ post.created_at|date:"Y/m/d" }}</small></div>
+<h2 class="h4 fw-bold"><a href="{% url 'blog:post_detail' post.slug %}" class="text-decoration-none text-dark">{{ post.title }}</a></h2>
+<p class="text-secondary lh-lg flex-grow-1">{{ post.content|truncatewords:28 }}</p>
+<div class="d-flex justify-content-between align-items-center mt-3"><a href="{% url 'blog:post_detail' post.slug %}" class="btn btn-outline-dark btn-sm">ادامه مطلب</a><small class="text-secondary"><i class="ri-eye-line"></i> {{ post.views }}</small></div>
+</article></div>
+{% empty %}<div class="col-12"><div class="empty-state"><i class="ri-draft-line"></i><h2>هنوز مقاله‌ای منتشر نشده است</h2><p>به‌زودی اولین مقاله فنی اینجا منتشر می‌شود.</p></div></div>{% endfor %}</div>
+</div></section>
+{% endblock index %}

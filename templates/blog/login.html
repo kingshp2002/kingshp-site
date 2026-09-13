@@ -1,0 +1,25 @@
+{% extends "home/base.html" %}
+{% block title %}ورود | Shapoor Mardani{% endblock %}
+{% block index %}
+<section class="page-header"><div class="container py-5"><span class="section-label">LOGIN</span><h1 class="display-5 fw-bold text-white mt-2">خوش برگشتی</h1><p class="text-white-50 mb-0">برای ادامه وارد حساب کاربری‌ات شو.</p></div></section>
+<section class="section-light py-5"><div class="container py-lg-5">
+<div class="row justify-content-center"><div class="col-lg-5 col-md-7">
+<div class="contact-form   text-white bg-dark">
+{% if form.non_field_errors %}<div class="alert alert-danger">{{ form.non_field_errors }}</div>{% endif %}
+<form method="post">
+{% csrf_token %}
+<div class="mb-3">
+  <label class="form-label" for="username">نام کاربری</label>
+  <input id="username" type="text" name="username" required autocomplete="username" class="form-control">
+</div>
+<div class="mb-4">
+  <label class="form-label" for="password">رمز عبور</label>
+  <input id="password" type="password" name="password" required autocomplete="current-password" class="form-control">
+</div>
+<button type="submit" class="btn btn-gold w-100">ورود <i class="ri-arrow-left-line"></i></button>
+</form>
+<p class="text-secondary small mt-4 mb-0 text-center">حساب نداری؟ <a href="{% url 'blog:register' %}" class="fw-bold text-decoration-none">ثبت‌نام کن</a></p>
+</div>
+</div></div>
+</div></section>
+{% endblock index %}
