@@ -37,6 +37,8 @@ class Post(models.Model):
 
     updated_at = models.DateTimeField(auto_now=True)
 
+    image = models.ImageField(upload_to='post_images/', blank=True)
+
     def __str__(self):
         return self.title
 

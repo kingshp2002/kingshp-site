@@ -32,4 +32,5 @@ class PostForm(forms.ModelForm):
             'slug',
             'category',
             'published',
+            'image',
         )
