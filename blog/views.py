@@ -85,7 +85,7 @@ def post_create(request):
     if not is_author(request.user):
         raise PermissionDenied
     if request.method == 'POST':
-        form = PostForm(request.POST)
+        form = PostForm(request.POST,request.FILES)
 
         if form.is_valid():
             post = form.save(commit=False)
